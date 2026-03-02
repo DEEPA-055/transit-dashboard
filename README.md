@@ -1,36 +1,155 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🚇 TransitFlow – Urban Transit Dashboard
 
-## Getting Started
+A modern, web-based transit analytics dashboard built with Next.js and TypeScript.
+The application visualizes urban transit data including ridership trends, route performance, congestion levels, and predictive insights through interactive charts and map visualizations.
 
-First, run the development server:
+🔗 Live Demo:
+https://transitdashboard-e933ueq3a-deepa-055s-projects.vercel.app
 
-```bash
+📂 GitHub Repository:
+https://github.com/DEEPA-055/transit-dashboard
+
+📌 Project Overview
+
+TransitFlow provides an interactive interface to analyze public transport systems. It demonstrates real-world dashboard design principles including data visualization, route analytics, and predictive insights.
+
+This project simulates a transit intelligence platform that could be used by city planners and transportation authorities to monitor and optimize urban mobility systems.
+
+✨ Features
+📊 Dashboard Overview
+
+Total ridership statistics
+
+Average delay metrics
+
+Efficiency score indicators
+
+Carbon savings tracking
+
+🗺 Route Analysis
+
+Route-specific performance details
+
+Congestion level insights
+
+24-hour ridership trend visualization
+
+Route path visualization on interactive map
+
+Predictive next-hour load estimation
+
+📈 Analytics Page
+
+Performance trends
+
+AI-inspired ridership predictions
+
+Confidence indicators
+
+Data-driven recommendations
+
+🧭 Planning Page
+
+Strategic transit planning insights
+
+Performance comparison indicators
+
+Optimization suggestions
+
+🛡 UX Improvements
+
+Loading states for charts
+
+Error handling with fallback UI
+
+Safe handling of missing API keys
+
+Fully responsive chart components
+
+🛠 Tech Stack
+Frontend
+
+Next.js 16 (App Router)
+
+React
+
+TypeScript
+
+Visualization
+
+Recharts (Area charts, trend graphs)
+
+Google Maps API (Route visualization)
+
+Styling
+
+Tailwind CSS
+
+Custom dark theme UI
+
+Deployment
+
+Vercel
+
+Continuous Deployment via GitHub integration
+
+🚀 Getting Started (Run Locally)
+1️⃣ Clone the Repository
+git clone https://github.com/DEEPA-055/transit-dashboard.git
+cd transit-dashboard
+2️⃣ Install Dependencies
+npm install
+3️⃣ Run Development Server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open in browser:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+http://localhost:3000
+🔐 Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create a .env.local file in the root directory:
 
-## Learn More
+NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your_google_maps_api_key
 
-To learn more about Next.js, take a look at the following resources:
+If no API key is provided, the map component will safely display a fallback message instead of crashing.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🌍 Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project is deployed using Vercel.
 
-## Deploy on Vercel
+Every push to the main branch automatically triggers a production deployment.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+🔗 Live URL:
+https://transitdashboard-e933ueq3a-deepa-055s-projects.vercel.app
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+📈 Future Improvements
+
+Replace Google Maps with OpenStreetMap (no API dependency)
+
+Integrate real-time transit APIs
+
+Add authentication & role-based dashboard
+
+Export analytics reports (PDF/CSV)
+
+Add monitoring & performance analytics
+
+🤝 Contributing
+
+Contributions are welcome.
+
+Fork the repository
+
+Create a new feature branch
+
+Commit your changes
+
+Open a pull request
+
+👩‍💻 Author
+
+Deepa Chaudhary
+Computer Science & Engineering Student
+Focused on Web Development, AI-driven Systems & Data Visualization
+
+GitHub: https://github.com/DEEPA-055
