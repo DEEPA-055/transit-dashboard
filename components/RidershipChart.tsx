@@ -12,11 +12,45 @@ import {
 } from 'recharts';
 
 interface RidershipChartProps {
-  data: number[];
+  data?: number[];
   label: string;
+  loading?: boolean;
+  error?: string | null;
 }
 
-const RidershipChart: React.FC<RidershipChartProps> = ({ data, label }) => {
+const RidershipChart: React.FC<RidershipChartProps> = ({
+  data,
+  label,
+  loading = false,
+  error = null,
+}) => {
+  // 🔹 Loading State
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-[300px]">
+        <div className="animate-spin h-8 w-8 border-4 border-green-400 border-t-transparent rounded-full"></div>
+      </div>
+    );
+  }
+
+  // 🔹 Error State
+  if (error) {
+    return (
+      <div className="flex items-center justify-center h-[300px] text-red-400">
+        ⚠ {error}
+      </div>
+    );
+  }
+
+  // 🔹 No Data State
+  if (!data || data.length === 0) {
+    return (
+      <div className="flex items-center justify-center h-[300px] text-gray-500">
+        No ridership data available
+      </div>
+    );
+  }
+
   const chartData = data.map((val, idx) => ({
     hour: `${idx}:00`,
     riders: val,
