@@ -17,7 +17,7 @@ const RidershipChart: React.FC<RidershipChartProps> = ({ data, label }) => {
     return (
         <div className="bg-card" style={{ height: '350px' }}>
             <h3 style={{ marginBottom: '20px', fontSize: '1.2rem' }}>{label} - 24h Trend</h3>
-            <ResponsiveContainer width="100%" height="100%">
+            <ResponsiveContainer width="100%" height={300}>
                 <AreaChart
                     data={chartData}
                     margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
