@@ -120,11 +120,9 @@ export default function RouteAnalysis() {
 
                             {/* Render Map if path exists and API Key is valid */}
                             {route.path ? (
-                                <div style={{ flex: 1, minHeight: '250px', borderRadius: '8px', overflow: 'hidden', border: '1px solid #333' }}>
+                                <div style={{ flex: 1, minHeight: '250px', borderRadius: '8px', overflow: 'hidden', border: '1px solid #333', position: 'relative' }}>
                                     {isApiKeyValid ? (
-                                        <LoadScript googleMapsApiKey={apiKey}>
-                                            <RouteMap path={route.path} />
-                                        </LoadScript>
+                                        <RouteMap path={route.path} />
                                     ) : (
                                         <MapFallback />
                                     )}

@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { GoogleMap, Polyline } from '@react-google-maps/api';
+import { GoogleMap, Polyline, useJsApiLoader } from '@react-google-maps/api';
 
 interface RouteMapProps {
   path: { lat: number; lng: number }[];
@@ -19,7 +19,7 @@ const defaultCenter = {
   lng: 77.2090,
 };
 
-const options = {
+const options: google.maps.MapOptions = {
   disableDefaultUI: true,
   zoomControl: true,
   styles: [
@@ -45,13 +45,23 @@ const options = {
 };
 
 const RouteMap: React.FC<RouteMapProps> = ({ path, cityCenter }) => {
-  const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+  const { isLoaded, loadError } = useJsApiLoader({
+    id: 'google-map-script',
+    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ''
+  });
 
-  // ✅ Add it HERE
-  if (!apiKey) {
+  if (loadError) {
     return (
-      <div className="flex items-center justify-center h-full text-yellow-400">
-        Map API key missing
+      <div className="flex items-center justify-center h-full text-red-500 bg-black/20 rounded-xl">
+        Map could not be loaded
+      </div>
+    );
+  }
+
+  if (!isLoaded) {
+    return (
+      <div className="flex items-center justify-center h-full text-yellow-500 bg-black/20 rounded-xl animate-pulse">
+        Loading Map...
       </div>
     );
   }

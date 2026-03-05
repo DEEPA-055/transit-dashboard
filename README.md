@@ -1,155 +1,76 @@
-🚇 TransitFlow – Urban Transit Dashboard
+# 🚇 TransitFlow – Urban Transit Dashboard
 
 A modern, web-based transit analytics dashboard built with Next.js and TypeScript.
 The application visualizes urban transit data including ridership trends, route performance, congestion levels, and predictive insights through interactive charts and map visualizations.
 
-🔗 Live Demo:
-https://transitdashboard-e933ueq3a-deepa-055s-projects.vercel.app
+🔗 **Live Demo**: [TransitFlow Live](https://transitdashboard-e933ueq3a-deepa-055s-projects.vercel.app)
 
-📂 GitHub Repository:
-https://github.com/DEEPA-055/transit-dashboard
+## ✨ Features
 
-📌 Project Overview
+- **🛡️ Secure Authentication**: A robust login and signup system with real-time validation and account protection.
+- **🌓 Dynamic Theming**: Seamlessly switch between **Dark** and **Light** modes with a single click. Your preference is automatically persisted.
+- **📍 Smart Navigation**: An interactive Sidebar and TopBar system for effortless access to all dashboard modules.
+- **📊 Real-time Analytics**: Visual representation of ridership data, cost analysis, and system efficiency.
+- **🔔 Interactive Notifications**: Stay updated with real-time transit alerts and system milestones through the integrated notification system.
+- **🔒 Session Persistence**: "Remember Me" functionality allows for flexible session management—choose between persistent login or per-session security.
+- **⚠️ Intelligent Feedback**: Custom alert modals for new users and clear error handling for a smooth user experience.
+- **🗺️ Route Analysis**: Route-specific performance details, congestion level insights, and interactive map visualization.
 
-TransitFlow provides an interactive interface to analyze public transport systems. It demonstrates real-world dashboard design principles including data visualization, route analytics, and predictive insights.
+## 🛠️ Technology Stack
 
-This project simulates a transit intelligence platform that could be used by city planners and transportation authorities to monitor and optimize urban mobility systems.
+- **Core**: [Next.js 14+](https://nextjs.org) (App Router), React 18, TypeScript
+- **Icons**: [Lucide React](https://lucide.dev)
+- **Styling**: Vanilla CSS with modern CSS Variables for multi-theme support
+- **Visualization**: [Recharts](https://recharts.org)
+- **Maps**: Google Maps API (with safe fallback UI)
+- **Deployment**: [Vercel](https://vercel.com)
 
-✨ Features
-📊 Dashboard Overview
+## 🚀 Getting Started
 
-Total ridership statistics
-
-Average delay metrics
-
-Efficiency score indicators
-
-Carbon savings tracking
-
-🗺 Route Analysis
-
-Route-specific performance details
-
-Congestion level insights
-
-24-hour ridership trend visualization
-
-Route path visualization on interactive map
-
-Predictive next-hour load estimation
-
-📈 Analytics Page
-
-Performance trends
-
-AI-inspired ridership predictions
-
-Confidence indicators
-
-Data-driven recommendations
-
-🧭 Planning Page
-
-Strategic transit planning insights
-
-Performance comparison indicators
-
-Optimization suggestions
-
-🛡 UX Improvements
-
-Loading states for charts
-
-Error handling with fallback UI
-
-Safe handling of missing API keys
-
-Fully responsive chart components
-
-🛠 Tech Stack
-Frontend
-
-Next.js 16 (App Router)
-
-React
-
-TypeScript
-
-Visualization
-
-Recharts (Area charts, trend graphs)
-
-Google Maps API (Route visualization)
-
-Styling
-
-Tailwind CSS
-
-Custom dark theme UI
-
-Deployment
-
-Vercel
-
-Continuous Deployment via GitHub integration
-
-🚀 Getting Started (Run Locally)
-1️⃣ Clone the Repository
+### 1. Clone the Repository
+```bash
 git clone https://github.com/DEEPA-055/transit-dashboard.git
 cd transit-dashboard
-2️⃣ Install Dependencies
+```
+
+### 2. Install Dependencies
+```bash
 npm install
-3️⃣ Run Development Server
-npm run dev
+```
 
-Open in browser:
-
-http://localhost:3000
-🔐 Environment Variables
-
-Create a .env.local file in the root directory:
-
+### 3. Set Up Environment Variables
+Create a `.env.local` file in the root directory:
+```bash
 NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your_google_maps_api_key
+```
 
-If no API key is provided, the map component will safely display a fallback message instead of crashing.
+### 4. Run Development Server
+```bash
+npm run dev
+```
 
-🌍 Deployment
+Open [http://localhost:3000](http://localhost:3000) with your browser to explore the dashboard.
 
-This project is deployed using Vercel.
+## 📁 Project Structure
 
-Every push to the main branch automatically triggers a production deployment.
+- `/app`: Next.js App Router routes and layouts.
+- `/components`: Reusable UI components (Sidebar, TopBar, StatCards, etc.).
+- `/context`: Global state management for Authentication and Theming.
+- `/data`: Mock transit data and system constants.
+- `/public`: Static assets and icons.
 
-🔗 Live URL:
-https://transitdashboard-e933ueq3a-deepa-055s-projects.vercel.app
+## 🤝 Contributing
 
-📈 Future Improvements
+Contributions are welcome. Feel free to fork the repository, create a new feature branch, and open a pull request.
 
-Replace Google Maps with OpenStreetMap (no API dependency)
+## 👩‍💻 Author
 
-Integrate real-time transit APIs
-
-Add authentication & role-based dashboard
-
-Export analytics reports (PDF/CSV)
-
-Add monitoring & performance analytics
-
-🤝 Contributing
-
-Contributions are welcome.
-
-Fork the repository
-
-Create a new feature branch
-
-Commit your changes
-
-Open a pull request
-
-👩‍💻 Author
-
-Deepa Chaudhary
-Computer Science & Engineering Student
+**Deepa Chaudhary**  
+Computer Science & Engineering Student  
 Focused on Web Development, AI-driven Systems & Data Visualization
 
-GitHub: https://github.com/DEEPA-055
+GitHub: [DEEPA-055](https://github.com/DEEPA-055)
+
+## 📝 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
